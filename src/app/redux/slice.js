@@ -5,6 +5,7 @@ const initialState={
 }
 
 const slice=createSlice({
+    name:"addUserSlice",
     initialState,
     reducers:{
         //state= iske andar kia data hay
@@ -12,7 +13,7 @@ const slice=createSlice({
         addUser:(state,action)=>{
             const data={
                 id:nanoid(),
-                name:action.name,
+                name:action.payload,
             }
             state.users.push(data)
         }
